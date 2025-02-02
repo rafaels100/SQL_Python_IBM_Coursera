@@ -1,0 +1,14 @@
+DISTINCT: Elimina duplicados
+COUNT: Cuenta los elementos del result set / query
+LIMIT: limita la cantidad de registros del result set / query
+
+--Enlistar los paises que ganaron al menos una medalla dorada, sin repetidos
+SELECT DISTINCT country FROM medals WHERE medaltype = 'Gold';
+
+--Da la cantidad de medallas que gano cada pais
+SELECT COUNT(country) FROM medals WHERE medaltype = 'Gold'; 
+
+--LOs 10 primeros resultados
+SELECT * FROM medals LIMIT 10;
+
+SELECT * FROM medals WHERE year=2014 LIMIT 10;
