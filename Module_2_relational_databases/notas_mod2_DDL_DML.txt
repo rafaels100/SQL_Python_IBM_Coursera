@@ -1,0 +1,25 @@
+Podemos separar a los comandos de SQL en dos tipos:
+DML: Data Manipulation Language
+Sirven para manipular data
+Estos comandos son:
+SELECT
+GROUP BY
+COUNT
+DISTINCT
+
+(CRUD OPERATIONS: CREATE, READ, UPDATE AND DELETE ROWS) => INSERT INTO, UPDATE, DELETE
+
+
+
+
+DDL: Data Definition Language
+Sirven para definir como organizamos la data
+Comandos:
+CREATE
+ALTER
+TRUNCATE
+
+
+Asi que una vez que la data esta creada y en nuestra tabla, el modificar o destruir esos datos es parte de DML en vez de DDL. Tiene sentido, no estas 
+definiendo, sino que estas redefiniendo, estas manipulando data existente en la tabla.
+Es cuando te metes con la tabla en general, su estructura y forma, que estas en terreno de definiciones, de DDL.
