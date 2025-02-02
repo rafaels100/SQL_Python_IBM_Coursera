@@ -1,0 +1,14 @@
+INSERT INTO Author(Author_ID, Lastname) VALUES ('A1', "Chong"), ('A2', "Chongo");
+
+Los datos de una tabla ya creada pueden modificarse con los comandos
+UPDATE and DELETE
+
+UPDATE FilmLocations SET Title="La bala que doblo la esquina" WHERE ReleaseYear < 1950;
+
+Aqui el WHERE juega un papel fundamental pues es el filtro que me permite targetear al objetivo u modificar. Si no usas el WHERE, todos los registros
+se van a modificar.
+
+DELETE FROM FilmLocations WHERE id_movie=14;
+Nuevamente, si no usamos el WHERE, todos los registros se veran afectados, se van a borrar
+
+DELETE FROM Author WHERE Authos_id IN ('A2', 'A5')
