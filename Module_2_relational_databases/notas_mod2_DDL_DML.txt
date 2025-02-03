@@ -3,9 +3,11 @@ DML: Data Manipulation Language
 Sirven para manipular data
 Estos comandos son:
 SELECT
+INSERT
 GROUP BY
 COUNT
 DISTINCT
+DELETE: Elimina o una fila o fila de datos de una tabla (los datos en esa fila, pero eso incliye a la fila en si)
 
 (CRUD OPERATIONS: CREATE, READ, UPDATE AND DELETE ROWS) => INSERT INTO, UPDATE, DELETE
 
@@ -15,9 +17,10 @@ DISTINCT
 DDL: Data Definition Language
 Sirven para definir como organizamos la data
 Comandos:
-CREATE
-ALTER
-TRUNCATE
+CREATE: definir tablas
+ALTER: alterar tablas, su estructura interna (por ejemplo cambiar el tipo de dato de una columna, o agregar una nueva, o eliminar alguna)
+TRUNCATE: se usa para eliminar datos en la tabla pero no la tabla en si
+DROP: se usa para eliminar la tabla con todos sus datos
 
 
 Asi que una vez que la data esta creada y en nuestra tabla, el modificar o destruir esos datos es parte de DML en vez de DDL. Tiene sentido, no estas 

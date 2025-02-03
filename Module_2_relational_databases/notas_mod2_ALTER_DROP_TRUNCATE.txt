@@ -1,0 +1,14 @@
+ALTER TABLE author
+	ADD COLUMN geh BOOL,
+	MODIFY telephone_number CHAR(20),
+	DROP COLUMN telephone_number;
+	
+
+TRUNCATE TABLE author
+	IMMEDIATE;
+--para eliminar todas las filas de una tabla sin eliminar la tabla en si
+	
+DROP TABLE author; --para eliminar la tabla con toda su info
+
+	
+	
