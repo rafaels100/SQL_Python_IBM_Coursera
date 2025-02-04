@@ -1,0 +1,22 @@
+Para hacer una especie de regex, usamos LIKE
+
+Para los autores cuyo nombre empieza con R:
+SELECT firstname FROM author WHERE firstname like 'R%'
+
+% : wild card caracter=> captura lo que sea que siga
+Una wild card se usa para reemplazar otros carcteres
+
+Se puede agregar varias condiciones
+SELECT title, pages FROM book 
+	WHERE pages >= 290 AND pages <= 300;
+	
+Tambien se puede:
+SELECT title, pages FROM book 
+	WHERE pages BETWEEN 290 AND 300;
+	
+De manera similar:
+SELECT firstname, lastname, country FROM author
+	WHERE country='AU' OR country='BR';
+	
+SELECT firstname, lastname, country FROM author
+	WHERE country IN ('AU', 'BR');

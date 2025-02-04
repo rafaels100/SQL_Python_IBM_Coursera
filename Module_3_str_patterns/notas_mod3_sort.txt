@@ -1,0 +1,15 @@
+Por default, la data se muestra en orden ascendente, del numero mas pequeño al mas grande, o de la letra mas 'pequeña' a la mas grande, en terminos de ascii.
+
+SELECT title FROM book;
+
+Pero podemos invertir eso
+SELECT title FROM book ORDER BY title DESC;
+
+Tambien se puede especificar la columna sobre la cual queremos que se aplique el ORDER BY usando indices, que parten del 1:
+
+SELECT title, pages FROM book ORDER BY 2 DESC;
+Aqui le estamos diciendo que el order by es sobre la columna 2, pages.
+
+Se pueden usar dos columnas
+SELECT * FROM `EMPLOYEES` ORDER BY SALARY DESC, SSN ASC;
+Cuando hay un empate por la primera columna (salary) de manera descendente, se ordena segun la segunda columna SSN de manera ascendente.

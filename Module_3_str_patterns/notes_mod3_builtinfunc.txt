@@ -1,0 +1,3 @@
+SUM(), MIN(), MAX(), AVG(), SUM()
+
+ROUND(), LENGTH(), UCASE(), LCASE()

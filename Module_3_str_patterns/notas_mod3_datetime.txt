@@ -1,0 +1,38 @@
+DATE: YYYYMMDD
+TIME: HHMMSS
+TIMESTAMP: YYYYXXDDHHMMSSZZZZZZ
+
+Algunas funciones:
+YEAR(), MONTH(), DAY(), DAYOFMONTH(), DAYOFWEEK(), DAYOFYEAR(),
+WEEK(), HOUR(), MINUTE(), SECOND()
+
+EJ
+SELECT DAY(rescuedate) FROM Petrescue WHERE animal='Cat';
+
+SELECT COUNT(*) FROM Petrescue
+	WHERE MONTH(rescuedate)='05'
+	
+REGISTROS ESPECIALES:
+CURRENT_DATE
+CURRENT_TIME
+
+ARITMETICA DE FECHAS
+DATE_ADD(fecha INTERVAL 3 DAY) : Suma 3 dias a cada fecha en la columna fecha
+DATEDIFF: Da la diferencia (en dias) entre dos fechas. 
+FROM_DAYS: Convierte en una fecha a la cantidad de dias, desde el '0000-01-01', que es como un 0 absoluto para fechas. Es como el nacimiento de Cristo.
+
+-- Cauntos dias pasaron desde que la fecha en el registro
+SELECT DATEDIFF(CURRENT_DATE, fecha) FROM Horarios;
+
+-- Puesto en formato de años, meses y dias
+SELECT FROM_DAYS(DATEDIFF(CURRENT_DATE, fecha)) FROM Horarios;
+
+Por ejemplo, DATEDIFF('2024-02-04', '0000-01-01') da 738885 dias, que si lo dividis por 365 da 2024.34... que es la cantidad de años que pasaron desde el naciminto de cristo.
+
+Si ahora hago
+FROM_DAYS(DATEDIFF('2024-02-04', '0000-01-01')) => da 2024-02-04, que es la cantidad de dias que pasaron entre estas fechas pero en formato de años, meses y dias.
+
+Por otro lado, DATEDIFF('2024-02-04', '2024-02-01') da 3, pues hay 3 dias entre estos. Para ver esos 3 dias en formatos de años, meses y dias, sin que signfique
+ninguna fecha en particular, solo una cuenta de cuanto tiempo paso entre esas dos fechas, puedo usar FROM_DAYS para convertirlo:
+FROM_DAYS(DATEDIFF('2024-02-04', '2024-02-01')) => '0000-01-04' 
+lo que indica que pasaron 3 dias entre esas dos fechas. Si fueran muchos mas dias, me daria los años, meses y dias que pasaron.

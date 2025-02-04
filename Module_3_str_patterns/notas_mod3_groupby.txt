@@ -1,0 +1,27 @@
+Para contar la cantidad de autores de cada pais:
+
+SELECT country, COUNT(country) 
+	FROM author GROUP BY country;
+
+El groupby resulta en subconjuntos que tienen valores que matchean para una o mas columnas.
+
+Podriamos agrupar por personas que tienen cierta edad y cierto peso.
+
+Por ejemplo, puedo agrupar entre grupos de personas que estan en la misma decada, y que superan cierto peso
+
+
+Para que tenga mas sentido la columna de resultados, se la cambiamos usando la palabra reservada AS
+SELECT country, COUNT(country)
+	AS Count FROM Author GROUP BY country;
+
+Restringiendo el result set: HAVING
+SELECT country, COUNT(country)
+	AS Count FROM Author GROUP BY country HAVING COUNT(country) > 4;
+	
+Having es como el WHERE del GROUP BY
+
+Tambien esta la funcion AVG
+SELECT DEP_ID, COUNT(*) AS "NUM_EMPLOYEES", AVG(SALARY) AS "AVG_SALARY"
+    FROM EMPLOYEES
+    GROUP BY DEP_ID
+    ORDER BY AVG_SALARY;
