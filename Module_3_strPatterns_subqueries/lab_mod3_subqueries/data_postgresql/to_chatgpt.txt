@@ -1,0 +1,5 @@
+employees: "emp_id","f_name","l_name","ssn","b_date","sex","address","job_id" (foreign from table jobs),"salary","manager_id","dep_id" (foreign from table departments)
+departments: "dept_id","dep_name","manager_id","loc_id" (foreign from table locations)
+job_history: "emp_id"(foreign from table employees),"start_date","job_id(foreign from table jobs)","dept_id (foreign from table departments)"
+jobs: "job_id","job_title","min_salary","max_salary"
+locations: "loc_id","dep_id" (foreing from table departments)

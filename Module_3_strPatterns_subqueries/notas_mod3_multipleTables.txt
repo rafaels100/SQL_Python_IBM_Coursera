@@ -1,0 +1,6 @@
+Se pueden usar subqueries para trabajar con multiples tablas, o se puede usar el JOIN
+
+Maneras de acceder a distintas tablas en la misma query:
+1- subqueries
+2- Implicit JOIN
+3- JOIN Operators

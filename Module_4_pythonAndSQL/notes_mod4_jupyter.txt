@@ -1,0 +1,36 @@
+Hay dos herramientas para trabajar con jupyter: jupyter notebooks and jupyter lab
+El ultimo incluye al primero, y permite mas personalizacion.
+
+Para instalar, entrar al virtual environment y hacer
+pip install jupyterlab
+y para correrlo
+jupyter lab
+o
+pip install notebook
+y para correrlo
+jupyter notebook
+
+MAGIC COMMANDS: Magia de lineas (%)
+Son comandos que no son codigo python pero que nos permiten obtener info valiosa del jupyter notebook
+%pwd : da el directorio donde esta inicializado el jupyter notebook
+%ls : list all files in the current directory
+%history : shows the command history
+%reset : resetea el namespace y remueve todos los nombres definidos por el usuario
+%who : lista todas las variables definidas por el usuario
+%whos : da mas info de las variables
+%matplotlib inline : hace que el matplotlib aparezca dentro del notebook
+%timeit : toma el tiempo de una ejecucion
+%lsmagic : muestra todos los magic commands
+
+MAGIA DE CELDAS (%%)
+%%writefile out.py
+y todo lo que escribas debajo en esa celda va a ser exportado a un archivo en el directorio del notebook
+
+%%HTML
+y debajo podes escribir codigo html que lo va a renderizar en la notebook
+
+%%javascript
+y debajo ajavascript
+
+%%bash
+y aqui bash

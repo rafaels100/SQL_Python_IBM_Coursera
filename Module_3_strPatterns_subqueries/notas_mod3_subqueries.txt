@@ -1,0 +1,18 @@
+Se usan para hacer queries sobre resultados de otras queries que hayas hecho
+SELECT column1 FROM Table
+	WHERE column2 = (SELECT MAX(column2) FROM table)
+	
+Obtener a los empleados que ganan mas que el promedio
+SELECT * FROM Table
+	WHERE column2 > (SELECT AVG(column2) FROM table)
+	
+EJEMPLO
+SELECT emp_id, salary, (SELECT AVG(salary) FROM employees) AS avg_salary
+	FROM employees;
+
+
+DERIVED TABLES / TABLES EXPRESSIONS
+Es cuando usamos un FROM para una query. La query usa el resultado de una subqeury como una fuente de data
+SELECT * FROM
+	(SELECT emp_id, f_name, l_name, dep_id
+		FROM employees) AS emp4all; 

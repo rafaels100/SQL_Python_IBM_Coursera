@@ -1,0 +1,26 @@
+Los DB-API methods son funciones que se reciclan a lo largo de todas las librerias para manejar diferentes sistemas de bases de datos.
+
+Asi, la libreria para conectarse con mySQL tiene los mismos metodos que la libreria para conectarse con postgreSQL, pues son DB-AI Methods.
+
+Estos son:
+
+Connection methods:
+Se usan para conectarse o desconetarse del database
+.cursor() : da una instancia de un objeto cursor que vamos a poder usar para realizar llamadas al database
+.commit() : se usa para commitear cualquier transaccion pendiente al database
+.rollback() : causa que el database vuelva al inicio de cualquier transaccion pendiente
+.close() : termina la conexion
+
+Cursor methods:
+Crear diferentes cursores no los deja independientes uno del otro. Una transaccion en uno afecta a los otros
+.callproc() : llama a un procedimiento, que es una funcion en el database
+.execute() : ejecuta una query
+.executemany() : ejecuta muchas queries
+.fetchone() : obtiene un resulado
+.fetchmany() : obtiene varios resultados, calculo que ajustable
+.fetchall() : obtiene todos los resultados
+.nextset() : mueve al cursor al siguiente result set disponible. Es como un iterador, que podes mover
+.arraysize()
+.close()
+
+Entonces execute devuelve un iterador?
