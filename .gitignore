@@ -1,5 +1,8 @@
 # Ignore environment files
 .env
 
+#ignore other files
+codigo_special_trial_IBM.txt
+
 # Ignore folders
 .venv/
