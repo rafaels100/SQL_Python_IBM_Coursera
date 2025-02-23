@@ -1,9 +1,15 @@
 import mysql.connector
+import os
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
+psw_rafa = os.getenv("MYSQL_PSW_RAFA")
 
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "rafa",
-    password = "clavet100",
+    password = psw_rafa,
     database = "exampleDB"
     )
 #print(mydb)
