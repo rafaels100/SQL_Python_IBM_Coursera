@@ -5,6 +5,8 @@ cd $carpeta
 #creo el virtual environmente
 python3 -m venv .venv
 source .venv/bin/activate
+#creo el archivo .env
+touch .env
 
 #libreria de API con mysql
 pip install mysql-connector-python
@@ -14,3 +16,5 @@ pip install psycopg2
 
 #para instalar el jupyter notebook
 pip install notebook
+#para instalar jupyterlab
+pip install jupyterlab

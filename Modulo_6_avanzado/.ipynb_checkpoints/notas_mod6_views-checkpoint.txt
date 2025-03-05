@@ -1,0 +1,7 @@
+VIEWS
+Una view es como una tabla, pero no se guarda como tal.
+Una view accede a partes de una tabla o tablas, y te deja ver cierta informacion, pero sin crear una nueva tabla.
+
+Se puede crear una view usando otras views, incluso en combinacion con tablas y otras views.
+
+Como crear una VIEW
